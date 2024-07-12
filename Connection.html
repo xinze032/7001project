@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="route-solid.svg"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "css/common.css">
+    <link rel="stylesheet" href = "css/base.css">
+    <link rel="stylesheet" href = "css/Connection.css">
+    <link rel="stylesheet" href = "css/gallery.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+    <script src="https://cdn.bootcss.com/proj4js/2.4.3/proj4.js"></script>
+    <script src="https://cdn.bootcss.com/proj4leaflet/1.0.1/proj4leaflet.min.js"></script>
+    <title>Contact</title>
+</head>
+<body>
+<!-- 快捷导航模块 -->
+<div class="shortcut">
+    <div class="W">
+        <div class="fr">
+            <ul>
+                <li class="active_a">
+                    <a href="index.html" class="active">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="map.html">
+                        <span>Map</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Product.html">
+                        <span>Spot</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Special.html">
+                        <span>Hotels</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Gallery.html">
+                        <span>Food</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Connection.html">
+                        <span>Customize</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="About.html">
+                        <span>About us</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 快捷导航模块2 -->
+<header class="header W">
+    <div>
+        <img class="logo" src="image/biaotou.png" />
+    </div>
+    <!-- 搜索模块 -->
+    <div class="search">
+        <input type="search" name="" id="" placeholder="New sencery">
+        <button>Search</button>
+    </div>
+    <!-- login模块 -->
+    <div class="login">
+        <form method="get" action="Connection.html">
+            <button>
+                Login!
+            </button>
+        </form>
+    </div>
+</header>
+
+
+<!-- <div id="wrapper"></div>
+
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.8&key=424c39fef83fdbf2772533c3ecc8e3d7"></script> 
+<script>
+window.onload = function(){
+		var map = new AMap.Map('wrapper');
+	}
+AMap.plugin('AMap.ToolBar',function(){//异步加载插件
+    var toolbar = new AMap.ToolBar();
+    map.addControl(toolbar);
+});
+    
+map.setCenter([116.397428, 39.90923]);
+map.setZoomAndCenter(16, [116.397428, 39.90923]);
+map.add(marker);
+
+	
+	
+
+</script>
+<script src="./js/text.js"></script> --> 
+<br>
+<div id="mapid" style="width:100%; height: 400px;"></div>
+<script>
+  
+    var mymap = L.map('mapid').setView([22.283001, 114.1385088], 15);
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {
+        maxZoom: 18,
+        subdomains: ['a', 'b', 'c'],
+        attribution: 'Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(mymap);
+
+   
+    //Adding marker
+    L.marker([22.283001, 114.138508]).addTo(mymap)
+        .bindPopup("<b>Hellow!</b><br />I am here.").openPopup();
+
+    var popup = L.popup();
+
+    //Adding clicking to map
+    function onMapClick(e) {
+        popup
+            .setLatLng(e.latlng)
+            .setContent("You clicked the map at " + e.latlng.toString())
+            .openOn(mymap);
+    }
+
+    mymap.on('click', onMapClick);
+
+</script>
+
+
+<!--位置信息-->
+<div class="bg-posi">
+    <div class="posi">
+       Position:
+        <a href="index.html">Home</a>
+        <span> > </span>
+        <a href="Connection.html" class="s-active">Customizable</a>
+    </div>
+</div>
+<h1 class="heading">
+    <span>P</span>
+    <span>L</span>
+    <span>A</span>
+    <span>N</span>
+</h1>
+<p class = "shuoming">
+    If you need a more detailed travel plan, you can fill out the form below and state your needs, we can customize your travel plan according to your needs and send it to you by email after customization.
+<style>
+    .shuoming{
+        color: rgba(117, 118, 119, 0.734);
+    }
+</style>
+</p>
+<section class="contact" id="contact">
+    <div class="row">
+
+        <div class="image">
+            <img src="image/contact-img.svg" alt="">
+           
+
+        </div>
+
+        <form action="cost.php" method="POST" id="send1">
+            <div class="inputBox">
+                <input type="number" placeholder="Number of days" id="name">
+                <input type="number" placeholder="Number of people" id="name">
+                <input type="email" placeholder="E-mail" id="email">
+            </div>
+            <div class="inputBox">
+                <input type="text" placeholder="Landscape, city, school?" id="telephone">
+                <input type="text" placeholder="Favorite types of food?" id="theme">
+                <textarea placeholder="Your preferences?" name="" id="send2" cols="30" rows="10"></textarea>
+            </div>
+
+            <input type="button" class="btn" value="send us" id="send">
+            
+        </form>
+        
+     
+        
+    </div>
+    
+</section>
+<!-- <script>
+window.onload = setForm;
+function setForm() {
+   document.getElementById("send1").onsubmit = function() {
+      if (this.checkValidity()) 
+      return false;
+   }
+}
+
+//使用submit按钮 + onclick="return 函数()" +函数编写代码: 
+function sub(){
+   //获取表单对象
+   var myform = document.getElementById("send1");
+   //获取用户输入的数据
+   var name = document.getElementById("name").value;
+   var email = document.getElementById("email").value;
+   var telephone = document.getElementById("telephone").value;
+//    var gender = genders.value;  //通过下拉框对象获取选中项的value
+   var theme = document.getElementById("theme").value;
+   var send = document.getElementById("send2").value;
+   var timestamp=new Date().getTime();
+   var time=(new Date(timestamp).toLocaleDateString()+" "+new Date(timestamp).toTimeString()).substr(0, 19);
+//    alert(email);
+//    local(name,email,telephone,theme,send);
+//    alert(email);
+   
+   if (typeof(Storage) !== "undefined") {
+      var storage = window.localStorage;
+    //   Data={
+    //     name1=name,email1=email,telephone1=telephone,theme1=theme,send1=send
+    //   };
+      data={name,email,telephone,theme,send};
+      var string_data = JSON.stringify(data);
+      var count = storage.length + 1;
+      storage.setItem(count,string_data);
+   } else {      
+      alert("Sorry, your browser does not support Web Storage...");
+
+   }
+   return false;
+} -->
+
+<!-- // function local(name,email,telephone,theme,send){
+//    if (typeof(Storage) !== "undefined") {
+//       var storage = window.localStorage;
+//       Data={
+//         name1=name,email1=email,telephone1=telephone,theme1=theme,send1=send
+//       };
+//       var string_data = JSON.stringify(data);
+//       var count = storage.length + 1;
+//       storage.setItem(count,string_data);
+//       alert("1");
+//    } else {      
+//       alert("Sorry, your browser does not support Web Storage...");
+
+//    }
+// } -->
+
+</script>
+<div class = "shortcut2">
+    <li>
+        <a href="Connection.html">
+            <span>Back to the top</span>
+        </a>
+    </li>
+    
+    </div>
+    <div class="shortcut">
+       
+        <footer>
+            Contact us: RentRadar@gmail.com
+        </footer>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+.cust{
+    width: 100%;
+    height: 300px;
+    border: rgb(123, 177, 199) 2px solid;
+}
+.btn1{
+    display: inline-block;
+    margin-top: 1rem;
+    background:#86b7bbb2;
+    color:#fff;
+    padding:.8rem 3rem;
+    border:.2rem solid #5f89b9;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+  .btn:hover{
+    background:rgba(255, 165, 0,.2);
+    color:#ffa500;
+  }
+  .send2{
+    width: 100%;
+  }

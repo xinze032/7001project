@@ -1,0 +1,34 @@
+p{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+h2{
+    padding-left: 10px;
+    padding-top: 30px;
+}
+table.schedule{
+    
+    background: white;
+    border: 2px outset gray;
+    border-collapse: collapse;
+    font-size: 1em;
+    width: 100%;
+  }
+  table.schedule th{
+    border: 2px solid gray;
+    padding: 15px;
+    vertical-align: top;
+  }
+  table.schedule td{
+    border: 2px solid gray;
+    padding: 7px;
+    vertical-align: top;
+  }
+  table.schedule thead{
+    background: rgba(157, 124, 201, 0.698);
+    color: white;
+  }
+  table.schedule tbody th{
+    background:  rgba(249, 236, 228, 0.815);
+  }
